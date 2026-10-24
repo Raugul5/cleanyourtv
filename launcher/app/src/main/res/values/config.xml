@@ -17,10 +17,18 @@
 
     <!-- Apps pinned to the dock row at the bottom, in this order. Missing apps are skipped. -->
     <string-array name="dock_apps">
-        <item>com.netflix.ninja</item>
-        <item>com.amazon.amazonvideo.livingroom</item>
-        <item>com.google.android.youtube.tv</item>
-        <item>in.startv.hotstar</item>
+        <!-- Lampa -->
+        <item>top.rootu.lampa</item>
+        <!-- SmartTube (stable / beta / old builds: whichever is installed) -->
+        <item>org.smarttube.stable</item>
+        <item>com.teamsmart.videomanager.tv</item>
+        <item>com.liskovsoft.smarttubetv.beta</item>
+        <!-- VK Video for Android TV -->
+        <item>com.vk.tv</item>
+        <!-- Rutube -->
+        <item>ru.rutube.app</item>
+        <!-- ivi -->
+        <item>ru.ivi.client</item>
     </string-array>
     <!-- With fewer dock_apps than columns (or a dock app that is not installed), the free dock slots take
          the first grid apps, so the dock never shows a gap. false leaves them empty (#162); a theme can
@@ -29,12 +37,25 @@
 
     <!-- Apps never shown as tiles (e.g. the Live TV app, which the Inputs menu already covers). -->
     <string-array name="hidden_apps">
-        <item>com.mediatek.wwtv.tvcenter</item>
-        <item>com.mitv.gallery</item>
+        <!-- Sony Live TV / programme guide: the Inputs menu already covers them -->
+        <item>com.sony.dtv.tvx</item>
+        <item>com.sony.dtv.tvxlauncher.programguide</item>
+        <!-- Google / Sony leftovers nobody opens from Home -->
+        <item>com.google.android.tv</item>
+        <item>com.google.android.videos</item>
+        <item>com.google.android.play.games</item>
+        <item>com.google.android.music</item>
+        <item>com.google.android.youtube.tvmusic</item>
+        <item>com.sony.dtv.sonyselect</item>
+        <item>com.sony.dtv.promos</item>
+        <item>com.sony.dtv.discovery</item>
+        <item>com.sony.dtv.customersupport</item>
+        <item>com.sony.dtv.smarthelp</item>
+        <item>com.sony.dtv.imanual</item>
     </string-array>
 
     <!-- The TV's Live TV / tuner app, offered at the end of the Inputs menu. Leave empty to omit. -->
-    <string name="live_tv_package" translatable="false">com.mediatek.wwtv.tvcenter</string>
+    <string name="live_tv_package" translatable="false">com.sony.dtv.tvx</string>
 
     <!-- Open the Live TV app above the first time Home comes up after the TV is switched on, for sets that are
          mostly used for broadcast TV. Once per boot: Home after that stays Home. Can also be set with
@@ -213,7 +234,7 @@
     <!-- Optional VPN app the network pill opens (hold the pill for Wi-Fi settings), e.g. the package of the
          VPN you use. Empty: the pill opens Wi-Fi settings. The green VPN badge shows for any VPN either way;
          with an app set here, a red "VPN off" badge also shows while no VPN is up. -->
-    <string name="vpn_app" translatable="false"></string>
+    <string name="vpn_app" translatable="false">com.happproxy</string>
     <!-- The dock as its own row: a lighter band, no names under the tiles, parked low on the screen with the top
          shelf above it. false makes the dock apps simply the first tiles of one plain grid (still in dock_apps
          order, no empty slots), with names under every tile and the glow behind every focused tile. -->
@@ -244,13 +265,13 @@
     <bool name="reorder_button">false</bool>
     <!-- Wi-Fi and Settings as round icon-only buttons (the network name moves to the talkback description);
          Inputs keeps its label. -->
-    <bool name="icon_only_buttons">false</bool>
+    <bool name="icon_only_buttons">true</bool>
     <!-- The Inputs pill as a round icon button too (the label moves to the talkback description). -->
     <bool name="icon_only_inputs">false</bool>
     <!-- true colours the Wi-Fi pill's icon green while the TV is online and leaves it white while it is not (dark on
          the focused pill either way), so the connection shows at a glance, also as an icon-only button. Can also be
          set with "wifi_status_color": true in a theme's config.json. -->
-    <bool name="wifi_status_color">false</bool>
+    <bool name="wifi_status_color">true</bool>
     <!-- With wifi_status_color: the icon orange while the TV is connected but Android has not reached the internet
          through it (a hotel or holiday-park Wi-Fi waiting for its login page) and red while it is offline, instead
          of white for both. Can also be set with "wifi_status_warnings": true in a theme's config.json. -->
@@ -267,6 +288,8 @@
     <!-- Apps shown as round buttons with their own logo in the top bar, left of the network pill, in this order.
          They leave the grid. Missing apps are skipped. Can also be set with "top_bar_apps" in a theme. -->
     <string-array name="top_bar_apps" translatable="false">
+        <!-- Happ: round button with its own logo, top right -->
+        <item>com.happproxy</item>
     </string-array>
     <!-- The Inputs pill in the top bar, shown when the TV has inputs to list. false hides it for good; what the
          remote's Input button does is unchanged. Can also be set with "show_inputs_pill" in a theme. -->
@@ -303,7 +326,7 @@
 
     <!-- Tiles per row in the grid; the dock always has this many slots. Tiles are 180dp wide at 4 columns and
          shrink to fit from 5 up (about 144dp at 5, 117dp at 6 on a 1080p TV). -->
-    <integer name="columns">4</integer>
+    <integer name="columns">5</integer>
 
     <!-- Basic motion is on; advanced effects are opt-in in the launcher's own Settings screen. -->
     <bool name="animations">true</bool>
