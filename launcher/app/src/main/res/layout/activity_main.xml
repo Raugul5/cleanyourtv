@@ -355,6 +355,13 @@
                     android:nextFocusDown="@+id/grid" />
 
                 <TextView
+                    android:id="@+id/btnCleanup"
+                    style="@style/TopButtonIcon"
+                    android:contentDescription="@string/cleanup"
+                    android:drawableStart="@drawable/ic_cleanup"
+                    android:nextFocusDown="@+id/grid" />
+
+                <TextView
                     android:id="@+id/btnSettings"
                     style="@style/TopButton"
                     android:text="@string/settings"
