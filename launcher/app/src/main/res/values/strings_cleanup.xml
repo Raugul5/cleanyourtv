@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cleanup" translatable="false">Очистить память</string>
+    <string name="cleanup_done" translatable="false">Память очищена: +%1$d МБ, свободно %2$d МБ (приложений проверено: %3$d)</string>
+</resources>
