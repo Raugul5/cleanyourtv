@@ -713,6 +713,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         List<String> keepAlive = new ArrayList<>(cfg.topBarApps);
         keepAlive.add(cfg.vpnApp);
         keepAlive.add(cfg.liveTvPackage);
+        keepAlive.addAll(cfg.libraryApps);   // AudioRelay keeps playing after "Clean memory"
         btnCleanup.setOnClickListener(v -> TaskKiller.cleanup(this, keepAlive));
         iconOnlyButtons = cfg.iconOnlyButtons;
         topMenu = cfg.topMenu;
