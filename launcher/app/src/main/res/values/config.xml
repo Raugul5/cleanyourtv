@@ -337,7 +337,7 @@
     <bool name="show_home_settings_shortcut">false</bool>
 
     <!-- Installed launchable apps, including ordinary Android apps. Also settable in config.json. -->
-    <bool name="app_library">false</bool>
+    <bool name="app_library">true</bool>
     <!-- Every app tile is its icon on a card tinted from that icon, name only under the focused tile,
          instead of each app's own banner. Off by default; a theme can set "uniform_tiles": true. -->
     <bool name="uniform_tiles">false</bool>
@@ -351,6 +351,8 @@
          (many China-market TVs, e.g. Coocaa 8R145), a fresh Home with app_library on would otherwise be
          nearly empty. Empty (off) by default, so existing setups change nothing. -->
     <string-array name="library_apps" translatable="false">
+        <!-- AudioRelay: phone app without a TV icon, shown as a tile on Home -->
+        <item>com.azefsw.audioconnect</item>
     </string-array>
 
     <!-- Module cards: an app that declares a card (docs/specs/card.md) can stand in for its tile with its own
